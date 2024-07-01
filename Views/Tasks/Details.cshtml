@@ -1,0 +1,61 @@
+﻿@model TaskManagementProject.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Task Details</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Task Information</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-md-3 text-primary">Name:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.Name)</dd>
+
+                        <dt class="col-md-3 text-primary">Description:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.Description)</dd>
+
+                        <dt class="col-md-3 text-primary">Status:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.Status)</dd>
+
+                        <dt class="col-md-3 text-primary">Created Date:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.CreatedDate)</dd>
+
+                        <dt class="col-md-3 text-primary">Project:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.Project.Name)</dd>
+
+                        <dt class="col-md-3 text-primary">Assigned To:</dt>
+                        <dd class="col-md-9">@Html.DisplayFor(model => model.User.FirstName)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom CSS for text color and spacing */
+    .text-primary {
+        color: #007bff; /* Bootstrap primary color */
+    }
+</style>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

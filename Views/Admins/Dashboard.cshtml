@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+<h2 style="text-align:center">Admin Dashboard</h2>
+<br />
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Project List</h5>
+                <p class="card-text">View a list of projects and their details.</p>
+                <a href="@Url.Action("Index", "Projects")" class="btn btn-outline-secondary">Go to Project List</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Task List</h5>
+                <p class="card-text">View a list of tasks assigned to you.</p>
+                <a href="@Url.Action("Index", "Tasks")" class="btn btn-outline-danger">Go to Task List</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">About Task Management</h5>
+                <p class="card-text justify-content-xxl-center">
+                    Welcome to the Task Management section of our admin dashboard! Our task management system empowers you to efficiently oversee and coordinate project tasks with precision. From organizing project timelines to assigning tasks and tracking progress, our intuitive interface ensures seamless collaboration and productivity. Stay on top of deadlines, monitor task statuses, and streamline communication among team members effortlessly. Whether you're managing ongoing projects or planning future milestones, our task management tools provide the clarity and control you need to drive success.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    /* Custom CSS styles for the page */
+    main {
+        padding: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<main>
+    <section class="row mb-4" aria-labelledby="taskManagementTitle">
+        <div class="col-md-8">
+            <h1 id="taskManagementTitle">Task Management System</h1>
+            <p class="lead">Efficiently manage your projects and tasks with our intuitive task management application.</p>
+            <p><a href="#" class="btn btn-primary btn-lg">Get Started &raquo;</a></p>
+        </div>
+    </section>
+
+    <div class="row">
+        <section class="col-md-4 mb-4" aria-labelledby="gettingStartedTitle">
+            <div class="card">
+                <h2 id="gettingStartedTitle" class="card-header">Getting Started</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Start building dynamic websites with ASP.NET MVC. offers a clean full control.
+                    </p>
+                    <a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 mb-4" aria-labelledby="manageProjectsTitle">
+            <div class="card">
+                <h2 id="manageProjectsTitle" class="card-header">Manage Projects</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Create, update, and track projects seamlessly using our intuitive interface.
+                    </p>
+                    <a class="btn btn-outline-dark" href="@Url.Action("Index", "Projects")">View Projects &raquo;</a>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 mb-4" aria-labelledby="manageTasksTitle">
+            <div class="card">
+                <h2 id="manageTasksTitle" class="card-header">Manage Tasks</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Efficiently manage tasks, assign responsibilities, and track progress.
+                    </p>
+                    <a class="btn btn-outline-dark" href="@Url.Action("Index", "Tasks")">View Tasks &raquo;</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; @DateTime.Now.Year - Task Management App</p>
+    </div>
+</footer>
+
+@section Scripts {
+    <script>
+        // Example JavaScript for tooltips
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+}
