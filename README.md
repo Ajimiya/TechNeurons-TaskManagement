@@ -44,4 +44,4 @@ Features :
    - Ensure robust input validation with data annotations.
 
 4 . JS Validation
- _ for deletion added some JS scripts also in frontend
+ _ for deletion added some JS scripts also in frontend.
